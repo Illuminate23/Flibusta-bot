@@ -1,3 +1,0 @@
-/home/vladimirpc/FLIBUSTA-BOT/build/CMakeFiles/my_parser.dir
-/home/vladimirpc/FLIBUSTA-BOT/build/CMakeFiles/edit_cache.dir
-/home/vladimirpc/FLIBUSTA-BOT/build/CMakeFiles/rebuild_cache.dir

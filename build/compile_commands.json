@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/home/vladimirpc/FLIBUSTA-BOT/build",
-  "command": "/usr/bin/c++  -I/home/vladimirpc/FLIBUSTA-BOT/Parser -I/usr/include/htmlcxx/html -Wall -std=c++17 -o CMakeFiles/my_parser.dir/Parser/parser.cpp.o -c /home/vladimirpc/FLIBUSTA-BOT/Parser/parser.cpp",
-  "file": "/home/vladimirpc/FLIBUSTA-BOT/Parser/parser.cpp",
-  "output": "CMakeFiles/my_parser.dir/Parser/parser.cpp.o"
-}
-]
