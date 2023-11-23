@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/my_parser.dir/Parser/parser.cpp.o -o my_parser  /usr/lib/libcurl.so /usr/lib/libhtmlcxx.so 
