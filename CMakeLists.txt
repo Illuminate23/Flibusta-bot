@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.27)
 project(MyParser)
 
+set(CMAKE_CXX_COMPILER "clang++")
 set(CMAKE_CXX_STANDARD 17)
 
 set(SOURCES
