@@ -1,30 +1,31 @@
 cmake_minimum_required(VERSION 3.27)
-project(MyParser)
+project(Bot)
 
 set(CMAKE_CXX_COMPILER "clang++")
 set(CMAKE_CXX_STANDARD 17)
 
 set(SOURCES
     Parser/parser.cpp
+    Bot/bot.cpp
 )
 
 # Укажите, где находятся заголовочные файлы вашего проекта
 include_directories(Parser)
 
 # Добавьте исполняемый файл
-add_executable(my_parser ${SOURCES})
+add_executable(bot ${SOURCES})
 
 # Укажите флаги компиляции (замените на свои флаги)
-target_compile_options(my_parser PRIVATE -Wall -std=c++17)
+target_compile_options(bot PRIVATE -Wall -std=c++17)
 
 #curl
 find_package(CURL REQUIRED)
 include_directories(${CURL_INCLUDE_DIRS})
-target_link_libraries(my_parser PRIVATE ${CURL_LIBRARIES})
+target_link_libraries(bot PRIVATE ${CURL_LIBRARIES})
 
 
 # Включите заголовочные файлы htmlcxx
-target_include_directories(my_parser PRIVATE /usr/include/htmlcxx/html)
-target_link_libraries(my_parser PRIVATE /usr/lib/libhtmlcxx.so)
+target_include_directories(bot PRIVATE /usr/include/htmlcxx/html)
+target_link_libraries(bot PRIVATE /usr/lib/libhtmlcxx.so)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "")

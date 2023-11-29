@@ -1,5 +1,10 @@
-#pragma once
 #include "parser.h"
+
+Parser::Parser()
+{}
+
+Parser::~Parser()
+{}
 
 size_t WriteCallback(void *contents, size_t size, size_t nmemb, std::string* output)
 {
@@ -9,20 +14,12 @@ size_t WriteCallback(void *contents, size_t size, size_t nmemb, std::string* out
 }
 
 
-Parser::Parser(std::string book_name)
+std::vector<book_node> Parser::get_list(std::string book_name)
 {
     curl_initialize();
     get_book_info(get_book_list(book_name));
-}
-
-std::vector<book_node> Parser::get_list()
-{
-    return book_list;
-}
-
-Parser::~Parser()
-{
     curl_easy_cleanup(curl); 
+    return book_list;
 }
 
 void Parser::curl_initialize()

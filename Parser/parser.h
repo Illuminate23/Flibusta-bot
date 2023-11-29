@@ -25,9 +25,9 @@ class Parser{
         htmlcxx::HTML::ParserDom dom_parser;
         tree<htmlcxx::HTML::Node> dom;
     public:
-        Parser(std::string book_name);
+        Parser();
         ~Parser();
-        std::vector<book_node> get_list();
+        std::vector<book_node> get_list(std::string book_name);
         void curl_initialize();
         std::vector<std::string> get_book_list(std::string book_name);
         void get_book_info(std::vector<std::string> books);
