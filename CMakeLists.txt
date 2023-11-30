@@ -28,7 +28,7 @@ target_link_libraries(bot PRIVATE ${CURL_LIBRARIES})
 target_include_directories(bot PRIVATE /usr/include/htmlcxx/html)
 target_link_libraries(bot PRIVATE /usr/lib/libhtmlcxx.so)
 
-#tgbot
+#Tgbot
 find_package(Threads REQUIRED)
 find_package(OpenSSL REQUIRED)
 find_package(Boost COMPONENTS system REQUIRED)
