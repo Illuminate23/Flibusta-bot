@@ -18,6 +18,7 @@ struct book_node
     std::string url;
 };
 
+
 class Parser{
     private:
         std::vector<book_node> book_list;

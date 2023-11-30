@@ -1,13 +1,13 @@
 [
 {
   "directory": "/home/vladimirpc/FLIBUSTA-BOT/build",
-  "command": "clang++  -I/home/vladimirpc/FLIBUSTA-BOT/Parser -I/usr/include/htmlcxx/html -Wall -std=c++17 -o CMakeFiles/bot.dir/Parser/parser.cpp.o -c /home/vladimirpc/FLIBUSTA-BOT/Parser/parser.cpp",
+  "command": "clang++ -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/vladimirpc/FLIBUSTA-BOT/Parser -I/usr/include/htmlcxx/html -Wall -std=c++17 -o CMakeFiles/bot.dir/Parser/parser.cpp.o -c /home/vladimirpc/FLIBUSTA-BOT/Parser/parser.cpp",
   "file": "/home/vladimirpc/FLIBUSTA-BOT/Parser/parser.cpp",
   "output": "CMakeFiles/bot.dir/Parser/parser.cpp.o"
 },
 {
   "directory": "/home/vladimirpc/FLIBUSTA-BOT/build",
-  "command": "clang++  -I/home/vladimirpc/FLIBUSTA-BOT/Parser -I/usr/include/htmlcxx/html -Wall -std=c++17 -o CMakeFiles/bot.dir/Bot/bot.cpp.o -c /home/vladimirpc/FLIBUSTA-BOT/Bot/bot.cpp",
+  "command": "clang++ -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/vladimirpc/FLIBUSTA-BOT/Parser -I/usr/include/htmlcxx/html -Wall -std=c++17 -o CMakeFiles/bot.dir/Bot/bot.cpp.o -c /home/vladimirpc/FLIBUSTA-BOT/Bot/bot.cpp",
   "file": "/home/vladimirpc/FLIBUSTA-BOT/Bot/bot.cpp",
   "output": "CMakeFiles/bot.dir/Bot/bot.cpp.o"
 }
