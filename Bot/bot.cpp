@@ -11,7 +11,7 @@ size_t WriteCallback(void *ptr, size_t size, size_t nmemb, FILE *stream) {
 }
 
 int main() {
-    TgBot::Bot bot("6735976367:AAG05pTJobzB7BFN5tNVEhjhZyboA1CZ3Tk");
+    TgBot::Bot bot("");
     std::map<int64_t, bool> isFindingBook;
     std::map<int64_t, bool> isWaitingBook;
     bot.getEvents().onCommand("start", [&bot](TgBot::Message::Ptr message) 
