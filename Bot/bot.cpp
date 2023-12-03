@@ -32,11 +32,15 @@ int main() {
             Parser parser;
             std::vector<book_node> book_list;
             book_list = parser.get_list(message->text);
+            if(book_list[0].name == "none")
+            {
+                bot.getApi().sendMessage(message->chat->id, "Ничего не найдено"); 
+                return;
+            }
             auto keyboard = std::make_shared<TgBot::InlineKeyboardMarkup>();
             for(const auto& title : book_list)
             {
                 std::vector<TgBot::InlineKeyboardButton::Ptr> row;
-                //bot.getApi().sendMessage(message->chat->id, title.name);
                 auto button = std::make_shared<TgBot::InlineKeyboardButton>();
                 std::cout << title.name << std::endl;
                 button->text = title.name;

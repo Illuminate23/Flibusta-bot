@@ -17,7 +17,14 @@ size_t WriteCallback(void *contents, size_t size, size_t nmemb, std::string* out
 std::vector<book_node> Parser::get_list(std::string book_name)
 {
     curl_initialize();
-    get_book_info(get_book_list(book_name));
+    std::vector<std::string> books;
+    books = get_book_list(book_name);
+    if(books[0] == "none")
+    {
+        book_list.push_back({"none", "none", "none"});
+    }
+    else
+        get_book_info(books);
     curl_easy_cleanup(curl); 
     return book_list;
 }
@@ -56,6 +63,18 @@ std::vector<std::string> Parser::get_book_list(std::string book_name)
     {
         if(books.size() == max)
             break;
+        if(it->isTag() && it->tagName() == "p")
+        {
+            ++it;
+            if(it->text().find("Ничего не найдено") != std::string::npos)
+            {
+                if(books.size() == 0)
+                    books.push_back("none");
+                else
+                    books[0] = "none";
+                return books; 
+            }
+        }
         if (it->isTag() && it->tagName() == "a")//Поиск книг
         {
             it->parseAttributes();
