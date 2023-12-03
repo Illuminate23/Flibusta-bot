@@ -35,6 +35,8 @@ int main() {
             if(book_list[0].name == "none")
             {
                 bot.getApi().sendMessage(message->chat->id, "Ничего не найдено"); 
+                std::cout << "####Ничего не найдено#####" << std::endl;
+                isFindingBook[message->chat->id] = false;
                 return;
             }
             auto keyboard = std::make_shared<TgBot::InlineKeyboardMarkup>();
